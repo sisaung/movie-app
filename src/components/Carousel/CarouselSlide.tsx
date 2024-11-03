@@ -19,7 +19,6 @@ const CarouselSlide = ({ data, mediaType, activePage }: CarouselSlideProps) => {
     align: "start",
     containScroll: "trimSnaps",
     duration: 40,
-    dragFree: true,
   });
   const {
     prevBtnDisabled,
@@ -30,12 +29,15 @@ const CarouselSlide = ({ data, mediaType, activePage }: CarouselSlideProps) => {
 
   return (
     <>
-      <div className="flex gap-3 mb-5 touch-manipulation ">
+      <div className="sm:flex gap-3 mb-5 touch-manipulation hidden">
         <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
         <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
       </div>
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex gap-5 touch-pan-y touch-pinch-zoom scroll-smooth">
+      <div
+        className="lg:overflow-hidden overflow-scroll hide-scrollbar scroll-smooth"
+        ref={emblaRef}
+      >
+        <div className="flex gap-5 touch-pan-y touch-pinch-zoom">
           {data?.map((item) => {
             if (item.media_type === "person") return;
 
