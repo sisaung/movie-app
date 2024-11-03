@@ -75,7 +75,7 @@ The app should now be running at http://localhost:5173
 
 ## 🌐 Demo 
 
-- https://movie-app-five-nu-28.vercel.app/
+- https://movie-app-khaki-eight-70.vercel.app/
 
 ## 📧 Contact
 - Email: sisaungvipse780@gmail.com 
